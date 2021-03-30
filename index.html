@@ -21,8 +21,8 @@
 		}
 	</style>
 	<script type="text/javascript">
-		var audio = new Audio('https://www.fesliyanstudios.com/play-mp3/7050');	
-		audio.play();
+		var audio = new Audio('http://docs.google.com/uc?export=open&id=1ou8oVzhqsnqU5ur0p9QVL3iryNGHahyf');	
+				
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
@@ -161,6 +161,12 @@
 		    startY = parseInt(e.clientY - offsetY);
 
 		    // Put your mousedown stuff here
+		    try{
+		    	console.log("here")
+		    	audio.play();
+			} catch(e){
+				console.log(e)
+			}
 		    isDown = true;
 		}
 
