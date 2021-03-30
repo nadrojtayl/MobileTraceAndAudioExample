@@ -210,6 +210,14 @@
 		// $("#canvas").mouseout(function (e) {
 		//     handleMouseOut(e);
 
+		  document.ontouchstart = function(e){ 
+		    e.preventDefault(); 
+		}
+
+		document.ontouchmove = function(e){ 
+		    e.preventDefault(); 
+		}
+
 		//handlers for computer
 		 $("#canvas").on("mousedown", function(e){
 		 	console.log(e)
@@ -246,6 +254,10 @@
 		  $("#canvas").on("pointerout", function(e){
 	       handleMouseOut(e);
 	    });
+
+
+
+
 
 
 
