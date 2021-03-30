@@ -228,6 +228,14 @@
 		    e.preventDefault(); 
 		}
 
+		function preventBehavior(e) {
+		    e.preventDefault(); 
+		};
+
+		document.addEventListener("touchmove", preventBehavior, {passive: false});
+
+		document.addEventListener("#canvas", preventBehavior, {passive: false});
+
 		//handlers for computer
 		 $("#canvas").on("mousedown", function(e){
 		 	console.log(e)
