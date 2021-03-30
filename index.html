@@ -152,6 +152,7 @@
 
 		function handleMouseUp(e) {
 		    e.preventDefault();
+		    console.log("As")
 		    mouseX = parseInt(e.clientX - offsetX);
 		    mouseY = parseInt(e.clientY - offsetY);
 
@@ -192,20 +193,76 @@
 		    }
 
 		}
+		
 
-		$("#canvas").mousedown(function (e) {
-			alert('sd')
-		    handleMouseDown(e);
-		});
-		$("#canvas").mousemove(function (e) {
-		    handleMouseMove(e);
-		});
-		$("#canvas").mouseup(function (e) {
-		    handleMouseUp(e);
-		});
-		$("#canvas").mouseout(function (e) {
-		    handleMouseOut(e);
-		});
+		//handlers for phone
+		
+
+		// $("#canvas").pointerdown(function (e) {
+		//     handleMouseDown(e);
+		// });
+		// $("#canvas").mousemove(function (e) {
+		//     handleMouseMove(e);
+		// });
+		// $("#canvas").pointerup(function (e) {
+		//     handleMouseUp(e);
+		// });
+		// $("#canvas").mouseout(function (e) {
+		//     handleMouseOut(e);
+
+		//handlers for computer
+		 $("#canvas").on("mousedown", function(e){
+		 	console.log(e)
+	        handleMouseDown(e);
+	    });
+
+
+		 $("#canvas").on("mousemove", function(e){
+	         handleMouseMove(e);
+	    });
+
+		  $("#canvas").on("mouseup", function(e){
+	        handleMouseUp(e);
+	    });
+
+		  $("#canvas").on("mouseout", function(e){
+	       handleMouseOut(e);
+	    });
+
+		  $("#canvas").on("pointerdown", function(e){
+		 	console.log(e)
+	        handleMouseDown(e);
+	    });
+
+
+		 $("#canvas").on("pointermove", function(e){
+	         handleMouseMove(e);
+	    });
+
+		  $("#canvas").on("pointerup", function(e){
+	        handleMouseUp(e);
+	    });
+
+		  $("#canvas").on("pointerout", function(e){
+	       handleMouseOut(e);
+	    });
+
+
+
+
+
+		// $("#canvas").mousedown(function (e) {
+		//     handleMouseDown(e);
+		// });
+		// $("#canvas").mousemove(function (e) {
+		//     handleMouseMove(e);
+		// });
+		// $("#canvas").mouseup(function (e) {
+		//     handleMouseUp(e);
+		// });
+		// $("#canvas").mouseout(function (e) {
+		//     handleMouseOut(e);
+		// });
 	</script>
 </body>
 </html>
